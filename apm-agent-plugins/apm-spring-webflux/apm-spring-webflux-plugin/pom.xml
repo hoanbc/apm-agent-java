@@ -20,6 +20,22 @@
 
     <dependencyManagement>
         <dependencies>
+            <!-- must be declared before spring-boot-dependencies to override the versions it manages -->
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-bom</artifactId>
+                <version>${version.log4j}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!-- must be declared before spring-boot-dependencies to override the versions it manages -->
+            <dependency>
+                <groupId>com.fasterxml.jackson</groupId>
+                <artifactId>jackson-bom</artifactId>
+                <version>${version.jackson-2.21}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
